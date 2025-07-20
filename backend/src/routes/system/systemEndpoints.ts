@@ -37,7 +37,7 @@ export class SystemEndpoint extends RouteBase{
     }
 
     GetUpdates(): string[]{
-        exec('ssh matthew@192.168.0.10 "yay -Qua"', (error: any, stdout: any, stderr: any) => {
+        exec('yay -Qua', (error: any, stdout: any, stderr: any) => {
             if(error){
                 throw error;
             }
